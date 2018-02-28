@@ -73,7 +73,7 @@
             $songsFile = file('Songs.txt');
             $lines = count($playlistFile);
             foreach($playlistFile as $playlistLine){
-                
+
 
             }
             $song = array();

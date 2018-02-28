@@ -8,19 +8,23 @@
 class User{
     public $name = "Guest";
     public $Playlist;
-    private $userName= guest;
-    private $password= password;
-    private $photo = "https://www.summitpost.org/images/large/886509.gif";
+    public $userName= guest;
+    public $password= password;
+    public $photo = "https://www.summitpost.org/images/large/886509.gif";
 
 
     function getUserName(){
-       return $userName;
+       return 'userName';
+    }
+    function setUserName($user){
+        return this.$userName = $user;
+    }
+    function setPhoto($link){
+        return $photo =  $link;
     }
 
     // COMPARES A STRING ARG WITH USER'S PASSWORD AND RETURNS A BOOL VALUE
-    function isCorrect($pWord){
-        return $pWord == $password;
-    }
+
 
 }
 ?>

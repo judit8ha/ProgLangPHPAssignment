@@ -66,6 +66,7 @@
         </h2>
         <p>
         <form><table border="1">
+                <caption>YOUR PLAYLISTS</caption>
                 <tr><th>Remove?</th><th>Title</th><th>Artist</th><th>Your Tag</th></tr>
             </table></form>
             <?php
@@ -73,6 +74,9 @@
             $songsFile = file('Songs.txt');
             $lines = count($playlistFile);
             foreach($playlistFile as $playlistLine){
+                $tempArr = explode($playlistLine, '-');
+                if(tempArr[0] == $currentUser.$userName);
+
 
 
             }

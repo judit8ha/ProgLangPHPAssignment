@@ -20,7 +20,10 @@ class User{
         return this.$userName = $user;
     }
     function setPhoto($link){
-        return $photo =  $link;
+        this.$photo =  $link;
+    }
+    function getPhoto(){
+        return 'photo';
     }
 
     // COMPARES A STRING ARG WITH USER'S PASSWORD AND RETURNS A BOOL VALUE

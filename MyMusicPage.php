@@ -33,7 +33,7 @@
         <ul>
             <li>
                 <h3>LogIn</h3>
-                <form action= "ProfilePage.php", method="post">
+                <form action= "ProfilePage.php" method="post">
                     <input type="text" name="User">
                     <input type="text" name="Password">
                     <p/>
@@ -50,10 +50,8 @@
         </h2>
         <p>
 
-        <?php
-        $song = array();
-        $playlist = array();
-        // A WAY TO BUY A SONG FROM ONE OF THE MUSIC SOURCES AND SEE IT APPEAR IN MY LIBRARY
+
+ // A WAY TO BUY A SONG FROM ONE OF THE MUSIC SOURCES AND SEE IT APPEAR IN MY LIBRARY
 
 // A WAY TO REMOVE A SONG FROM MY LIBRARY
 

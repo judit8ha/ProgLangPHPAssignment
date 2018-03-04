@@ -2,24 +2,23 @@
 <html>
 <head>
 
-    <!-- your webpage info goes here -->
+
 
     <title>ZyTunes</title>
 
     <meta name="author" content="Xochitl J Oliveros" />
     <meta name="ZyTunes music" content="" />
 
-    <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
-    <link rel="stylesheet" href="style2.css" type="text/css" />
+    <link rel="stylesheet" href="ZyTunesStyle.css" type="text/css" />
 
 </head>
 <body>
 
-<!-- webpage content goes here in the body -->
+
 
 <div id="page">
     <div id="logo">
-        <h1><a href="/" id="logoLink">Zamazon</a></h1>
+        <h1><a href="/" id="logoLink">Home</a></h1>
     </div>
     <div id="nav">
         <ul>
@@ -29,9 +28,34 @@
         </ul>
     </div>
     <div id="content">
-        <h2>Home</h2>
+        <h2>ZyTunes</h2>
         <p>
-            **** MUSIC TABLE FOR PURCHASE
+
+            <?php
+            //function getFile($songs){
+                echo"<table>"
+                    ."<caption>New Music</caption>"
+                    ."<tr>"
+                    ."<th>Title</th>"."<th>Artist</th>";
+                $handle = @fopen("ZyTunesSongs", "r");
+                if ($handle) {
+                    while (($buffer = fgets($handle, 4096)) !== false) {
+                       // echo $buffer;
+                    $zySongs = explode("-", $buffer);
+
+                        echo"<tr><td>".$zySongs[0]."</td>"."<td>".$zySongs[1]."</td>"
+                            ."<td><form action=\"ProfilePage.php\" , method=\"post\" , id=\"nameform\">"
+                            ."<input type=\"submit\" value=\"Buy\">"
+                            ."</form></td></tr>";
+                    }
+                    if (!feof($handle)) {
+                        echo "Error: unexpected fgets() fail\n";
+                    }
+                    fclose($handle);
+                }
+
+                echo"</table>";
+             ?>
         </p>
         <p>
             ****DESCRIPTIONS
